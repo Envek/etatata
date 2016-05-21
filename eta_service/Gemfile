@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'msgpack'
+gem 'msgpack-rpc'
+gem 'activesupport', require: 'active_support'
+gem 'activerecord', '~> 5.0.0.rc1', require: 'active_record'
+gem 'pg'
+
+group :development do
+  gem 'pry'
+end
