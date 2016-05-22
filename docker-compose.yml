@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  eta_api:
+    build: eta_api
+    ports:
+     - "4567:4567"
+    depends_on:
+     - eta_service
+    environment:
+      ETA_SERVICE_HOST: eta_service
+
+  eta_service:
+    build: eta_service
+    ports:
+     - "4568:4568"
+    depends_on:
+     - postgresql
+    environment:
+      DATABASE_URL: postgresql://eta_service:mysecretpassword@postgresql/wheely
+
+  postgresql:
+    build: db
+    environment:
+      POSTGRES_USER:     eta_service
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB:       wheely

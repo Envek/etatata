@@ -2,6 +2,22 @@
 
 ## Launch
 
+### Via Docker
+
+You will need to have installed:
+
+ - Recent [Docker]
+ - Recent [Docker Compose]
+
+Then just execute next command from this directory:
+
+    docker-compose up
+
+Access API endpoint on URL like this: http://localhost:4567/?latitude=55.923175&longitude=37.858515
+
+
+### Manually
+
 You will need to have installed:
 
  - Recent MRI Ruby version (recommended: 2.3)
